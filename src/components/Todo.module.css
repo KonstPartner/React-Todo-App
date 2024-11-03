@@ -10,6 +10,12 @@
   border-radius: 5px;
 }
 
+.completed{
+  background-color: none;
+  border: 2px solid grey;
+  color: grey;
+}
+
 .todoIcon{
   font-size: 25px;
   color: teal;
@@ -18,4 +24,18 @@
 
 .todoContainer p {
   font-size: 25px;
+}
+
+.todoClickableIconsContainer{
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.todoClickableIcons{
+  font-size: 25px;
+  margin: 0 5px;
+}
+
+.todoClickableIcons:hover{
+  transform: scale(1.4);
 }

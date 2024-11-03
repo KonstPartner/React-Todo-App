@@ -3,12 +3,14 @@ import Button from 'utils/Button'
 import { v4 as uuidv4 } from 'uuid'
 
 const TodoForm = ({ addTodo }) => {
-  const [todo, setTodo] = useState({ id: uuidv4(), text: '' })
+  const defaultTodo = { id: uuidv4(), text: '', isCompleted: false }
+  
+  const [todo, setTodo] = useState({ ...defaultTodo })
 
   const handleSubmit = (event) => {
     event.preventDefault()
     addTodo(todo)
-    setTodo({ id: uuidv4(), text: '' })
+    setTodo({ ...defaultTodo })
   }
 
   return (

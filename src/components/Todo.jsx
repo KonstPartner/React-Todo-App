@@ -1,12 +1,22 @@
 import React from 'react'
-import { RiTodoFill } from "react-icons/ri";
+import { RiTodoFill, RiCheckFill, RiDeleteBin2Line } from 'react-icons/ri'
 import styles from './Todo.module.css'
 
-const Todo = ({todo}) => {
+const Todo = ({ todo, deleteTodo, toggleCompleted }) => {
   return (
     <div className={styles.todoContainer}>
-    <RiTodoFill className={styles.todoIcon}/>
-    <p>{todo}</p>
+      <RiTodoFill className={styles.todoIcon} />
+      <p>{todo.text}</p>
+      <div className={styles.todoClickableIconsContainer}>
+        <RiDeleteBin2Line
+          className={styles.todoClickableIcons}
+          onClick={() => deleteTodo(todo.id)}
+        />
+        <RiCheckFill
+          className={styles.todoClickableIcons}
+          onClick={() => toggleCompleted(todo.id)}
+        />
+      </div>
     </div>
   )
 }
