@@ -23,7 +23,11 @@ const TodoList = ({
         <Button title="Reset todos" onClick={clearTodos}>
           <RiRefreshLine />
         </Button>
-        <Button title="Delete completed todos" onClick={deleteCompletedTodos}>
+        <Button
+          title="Delete completed todos"
+          onClick={deleteCompletedTodos}
+          disabled={todos.find((todo) => todo.isCompleted) ? false : true}
+        >
           <RiDeleteBin2Line />
         </Button>
       </div>
@@ -40,7 +44,12 @@ const TodoList = ({
           />
         )
       })}
-      {!!completedCount && <h2>You have completed {completedCount} {completedCount > 1 ? 'todos' : 'todo'}</h2>}
+      {!!completedCount && (
+        <h2>
+          You have completed {completedCount}{' '}
+          {completedCount > 1 ? 'todos' : 'todo'}
+        </h2>
+      )}
     </>
   )
 }

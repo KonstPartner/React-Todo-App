@@ -5,13 +5,13 @@ import TodoList from './TodoList'
 const TodoContainer = () => {
   const [todos, setTodos] = useState([])
 
-  // useEffect(() => {
-  //   setTodos(JSON.parse(localStorage.getItem('todos')))
-  // }, [])
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem('todos')))
+  }, [])
 
-  // useEffect(() => {
-  //   localStorage.setItem('todos', JSON.stringify(todos))
-  // }, [todos])
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   const addTodo = (todo) => {
     setTodos([...todos, todo])

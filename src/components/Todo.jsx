@@ -4,16 +4,20 @@ import styles from './Todo.module.css'
 
 const Todo = ({ todo, deleteTodo, toggleCompleted }) => {
   return (
-    <div className={styles.todoContainer}>
+    <div
+      className={`${styles.todoContainer} ${
+        todo.isCompleted ? styles.completed : ''
+      }`}
+    >
       <RiTodoFill className={styles.todoIcon} />
       <p>{todo.text}</p>
       <div className={styles.todoClickableIconsContainer}>
         <RiDeleteBin2Line
-          className={styles.todoClickableIcons}
+          className={`${styles.todoClickableIcons} ${styles.deleteIcon}`}
           onClick={() => deleteTodo(todo.id)}
         />
         <RiCheckFill
-          className={styles.todoClickableIcons}
+          className={`${styles.todoClickableIcons} ${styles.checkIcon}`}
           onClick={() => toggleCompleted(todo.id)}
         />
       </div>

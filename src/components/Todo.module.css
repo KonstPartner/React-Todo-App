@@ -1,41 +1,57 @@
-.todoContainer{
+.todoContainer {
   text-align: left;
   background-color: #fff;
+  border: 2px solid #fff;
   color: #000;
   margin: 20px auto;
   max-width: 550px;
   display: flex;
-  padding: 10px;
+  padding: 7px 10px;
   align-items: center;
   border-radius: 5px;
 }
 
-.completed{
-  background-color: none;
-  border: 2px solid grey;
+.completed {
+  background-color: transparent;
+  border-color: grey;
   color: grey;
 }
 
-.todoIcon{
+.todoIcon {
   font-size: 25px;
   color: teal;
   margin-right: 10px;
+}
+
+.completed .todoIcon,
+.completed .todoClickableIcons {
+  color: gray;
 }
 
 .todoContainer p {
   font-size: 25px;
 }
 
-.todoClickableIconsContainer{
+.todoClickableIconsContainer {
   margin-right: 0;
   margin-left: auto;
 }
 
-.todoClickableIcons{
+.todoClickableIcons {
+  color: lightgray;
   font-size: 25px;
   margin: 0 5px;
 }
 
-.todoClickableIcons:hover{
+.todoClickableIcons:hover {
   transform: scale(1.4);
+  transition: transform 0.3s;
+}
+
+.deleteIcon:hover {
+  color: red;
+}
+
+.checkIcon:hover {
+  color: green;
 }
