@@ -22,7 +22,7 @@ const TodoContainer = () => {
     <>
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos}/>
+      <TodoList clearTodos={() => setTodos([])} todos={todos}/>
     </>
   )
 }

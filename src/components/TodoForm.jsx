@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from 'utils/Button'
 import { v4 as uuidv4 } from 'uuid'
 
 const TodoForm = ({ addTodo }) => {
@@ -19,7 +20,7 @@ const TodoForm = ({ addTodo }) => {
         placeholder="Enter new todo"
         required
       />
-      <button type="submit">Submit</button>
+      <Button type="submit">Submit</Button>
     </form>
   )
 }

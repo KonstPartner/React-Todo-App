@@ -8,14 +8,6 @@ h1{
   margin-bottom: 20px;
 }
 
-button {
-  margin: 0;
-  padding: 11px;
-  font-size: 23px;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-}
 
 input{
   border: none;

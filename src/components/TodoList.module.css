@@ -1,0 +1,14 @@
+.iconsContainer{
+  display: flex;
+  width: 130px;
+  margin: 10px auto;
+  justify-content: space-between;
+}
+
+.iconsContainer Button{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+}
