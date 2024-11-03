@@ -3,15 +3,33 @@
 }
 
 h1{
-  font-size: 90px;
-  margin-top: 20px;
+  font-size: 35px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 15px;
-  font-size: 30px;
+  margin: 0;
+  padding: 11px;
+  font-size: 23px;
   border-radius: 5px;
-  margin: 20px;
   border: 0;
   cursor: pointer;
+}
+
+input{
+  border: none;
+  margin-right: 20px;
+  padding: 15px;
+  width: 270px;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 18px;
+}
+
+form{
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
