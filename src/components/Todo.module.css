@@ -1,0 +1,21 @@
+.todoContainer{
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  margin: 20px auto;
+  max-width: 550px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.todoIcon{
+  font-size: 25px;
+  color: teal;
+  margin-right: 10px;
+}
+
+.todoContainer p {
+  font-size: 25px;
+}
