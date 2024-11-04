@@ -10,7 +10,7 @@ const Todo = ({ todo, deleteTodo, toggleCompleted }) => {
       }`}
     >
       <RiTodoFill className={styles.todoIcon} />
-      <p>{todo.text}</p>
+      <p title={todo.text}>{todo.text}</p>
       <div className={styles.todoClickableIconsContainer}>
         <RiDeleteBin2Line
           className={`${styles.todoClickableIcons} ${styles.deleteIcon}`}

@@ -11,6 +11,12 @@
   border-radius: 5px;
 }
 
+.todoContainer p {
+  width: 440px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .completed {
   background-color: transparent;
   border-color: grey;
@@ -21,11 +27,6 @@
   font-size: 25px;
   color: teal;
   margin-right: 10px;
-}
-
-.completed .todoIcon,
-.completed .todoClickableIcons {
-  color: gray;
 }
 
 .todoContainer p {
@@ -54,4 +55,9 @@
 
 .checkIcon:hover {
   color: green;
+}
+
+.completed .todoIcon,
+.completed .todoClickableIcons {
+  color: gray;
 }

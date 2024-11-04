@@ -1,8 +1,6 @@
 import React from 'react'
-import { RiDeleteBin2Line, RiRefreshLine } from 'react-icons/ri'
 import Todo from './Todo'
-import Button from 'utils/Button'
-import styles from './TodoList.module.css'
+import TodoActions from './TodoActions'
 
 const TodoList = ({
   todos,
@@ -19,18 +17,11 @@ const TodoList = ({
 
   return (
     <>
-      <div className={styles.iconsContainer}>
-        <Button title="Reset todos" onClick={clearTodos}>
-          <RiRefreshLine />
-        </Button>
-        <Button
-          title="Delete completed todos"
-          onClick={deleteCompletedTodos}
-          disabled={todos.find((todo) => todo.isCompleted) ? false : true}
-        >
-          <RiDeleteBin2Line />
-        </Button>
-      </div>
+      <TodoActions
+        todos={todos}
+        clearTodos={clearTodos}
+        deleteCompletedTodos={deleteCompletedTodos}
+      />
       {todos.map((todo) => {
         if (todo.isCompleted) {
           completedCount += 1

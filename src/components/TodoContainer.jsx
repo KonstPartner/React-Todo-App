@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 
-const TodoContainer = () => {
+const TodoContainer = ({ saveKey }) => {
   const [todos, setTodos] = useState([])
 
   useEffect(() => {
-    setTodos(JSON.parse(localStorage.getItem('todos')))
-  }, [])
+    setTodos(JSON.parse(localStorage.getItem(saveKey)))
+  }, [saveKey])
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos])
+    localStorage.setItem(saveKey, JSON.stringify(todos))
+  }, [todos, saveKey])
 
   const addTodo = (todo) => {
     setTodos([...todos, todo])

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 const TodoForm = ({ addTodo }) => {
   const defaultTodo = { id: uuidv4(), text: '', isCompleted: false }
-  
+
   const [todo, setTodo] = useState({ ...defaultTodo })
 
   const handleSubmit = (event) => {
